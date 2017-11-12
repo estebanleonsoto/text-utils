@@ -1,4 +1,4 @@
-(defproject text-utils "0.1.0-SNAPSHOT"
+(defproject text-utils "0.1.0"
   :description "Utility functions to work with text data"
   :url ""
   :license {:name "GNU public licence V3.0"
