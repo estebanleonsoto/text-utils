@@ -2,8 +2,8 @@
   (:require [clojure.test :refer :all])
   (:require [text-tokenization.lines-of-tokens :refer :all]))
 
-(def test-matrix-1 (list (list "a" "b") (list "c" "d")))
-(def test-matrix-numbers (list (list 1 2) (list 3 4)))
+(def test-matrix-1 '(("a" "b") ("c" "d")))
+(def test-matrix-numbers '((1 2) (3 4)))
 
 
 (deftest get-token-at-test
@@ -30,7 +30,7 @@
 (deftest to-lines-of-tokens-test
   (testing
     "A two lines text with 2 words in each row is converted to a matrix 2 by 2"
-    (is (= (to-lines-of-tokens "one two \n three four") (list (list "one" "two") (list "three" "four"))))))
+    (is (= (to-lines-of-tokens "one two \n three four") '(("one" "two") ("three" "four"))))))
 
 (deftest to-lines-of-tokens-filters-out-spaces-test
   (testing
